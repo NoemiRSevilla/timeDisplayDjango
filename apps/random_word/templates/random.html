@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Word</title>
+</head>
+<body>
+    <div class="above box">Random Word (attempt +{{request.request.session.counter}})</div>
+    <div class="big box">
+    <form action="/random" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class='random'>{{string}}</label>
+        <input type="hidden" name="generate" value="{{string}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Generate</button>
+        </form>
+    
+        <form action="/delete" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+            <input type="hidden" name="delete" value="delete">
+            </div>
+            <button type="submit" class="btn btn-primary">Destroy</button>
+            </form>
+
+    </div>
+</body>
+</html>

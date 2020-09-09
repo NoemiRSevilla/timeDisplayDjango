@@ -1,0 +1,15 @@
+.small{
+    width: 250px;
+    height: 80px;
+    font-size: 15px;
+    border: 2px solid black;
+    display: block;
+}
+
+.big{
+    width: 700px;
+    height: 400px;
+    font-size: 100px;
+    border: 2px solid black;
+    display: block;
+}
